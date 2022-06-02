@@ -1,4 +1,4 @@
-function test(number) {
+function evenAndOddSubtraction(number) {
 
     let odd = 0;
     let even = 0;
@@ -17,4 +17,4 @@ function test(number) {
     let total = odd - even;
     console.log(total);
 }
-test([3,5,7,9])
+evenAndOddSubtraction([3,5,7,9])
