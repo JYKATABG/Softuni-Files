@@ -1,20 +1,15 @@
-function test(number) {
+function test(arr1,arr2) {
 
-    let odd = 0;
-    let even = 0;
-    let result = []
+    for(let i = 0; i < arr1.length;i++) {
+        arr1[i] = Number(arr1[i])
+    }
 
-    for(let i = 0;i < number.length;i++) {
-        number[i] = Number(number[i])
+    for(let i = 0;i < arr2.length;i++) {
+        arr2[i] = Number(arr2[i])
     }
-    for(let num of number) {
-        if(num % 2 === 0) {
-            odd += num
-        } else {
-            even += num
-        }
+
+    if(arr1 === arr2) {
+        console.log();
     }
-    let total = odd - even;
-    console.log(total);
 }
-test([3,5,7,9])
+test(['10','20','30'], ['10','20','30'])
