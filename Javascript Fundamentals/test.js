@@ -1,15 +1,22 @@
-function test(arr1,arr2) {
-
-    for(let i = 0; i < arr1.length;i++) {
-        arr1[i] = Number(arr1[i])
-    }
-
-    for(let i = 0;i < arr2.length;i++) {
-        arr2[i] = Number(arr2[i])
-    }
-
-    if(arr1 === arr2) {
-        console.log();
+function min(a,b) {
+    if(a < b) {
+        return a;
+    } else {
+        return b;
     }
 }
-test(['10','20','30'], ['10','20','30'])
+
+function max(a,b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+function distance(a, b) {
+    return max(a, b) * min(a, b);
+}
+
+let result = distance(13,11)
+console.log(result);
