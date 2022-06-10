@@ -1,22 +1,19 @@
-function min(a,b) {
-    if(a < b) {
-        return a;
-    } else {
-        return b;
+function test(firstChar,secondChar) {
+
+    
+    let startChar = Math.min(firstChar.charCodeAt(),secondChar.charCodeAt())
+    let finalChar = Math.max(firstChar.charCodeAt(),secondChar.charCodeAt())
+
+    let newArray = []
+
+    for(let i = startChar + 1;i < finalChar;i++) {
+        let toString = String.fromCharCode(i)
+        newArray.push(toString)
     }
-}
 
-function max(a,b) {
-    if (a > b) {
-        return a;
-    } else {
-        return b;
-    }
-}
+    console.log(newArray.join(" "));
 
-function distance(a, b) {
-    return max(a, b) * min(a, b);
 }
-
-let result = distance(13,11)
-console.log(result);
+test('#',
+':'
+)
