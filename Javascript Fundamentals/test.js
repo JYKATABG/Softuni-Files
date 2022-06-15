@@ -1,15 +1,10 @@
-function test(input) {
+function test(numbers) {
 
-   
-    let step = input.pop();
-    let result = []
+    let newArray = []
 
-    for(let el in input) {
-        if(el % step === 0) {
-            result.push(input[el])
-        }
-    }
-    console.log(result.join(" "));
+    let sortedNumbers = numbers.sort((a,b)=> a - b);
+    let slicedNumbers = sortedNumbers.slice(0,2)
+    console.log(slicedNumbers.join(" "));
 
 }
-test(['1', '2', '3', '4', '5', '6']);
+test([3, 0, 10, 4, 7, 3])

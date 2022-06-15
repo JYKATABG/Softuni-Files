@@ -1,11 +1,11 @@
 function test(input) {
 
-   
+
     let step = input.pop();
     let result = []
 
-    for(let el in input) {
-        if(el % step === 0) {
+    for (let el in input) {
+        if (el % step === 0) {
             result.push(input[el])
         }
     }
