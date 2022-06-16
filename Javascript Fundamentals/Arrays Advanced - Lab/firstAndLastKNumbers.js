@@ -1,17 +1,13 @@
-function firstAndLastKNumbers(n,k) {
+function firstAndLastKNumbers(numbers) {
 
-    let sequence = [1]
+    let k = numbers.shift()
 
-    for(let i = 0;i < n - 1;i++) {
-        let sequenceK = sequence.slice(-k)
-        let sum = 0;
-        for(let el of sequenceK) {
-            sum += el
-        }
-        sequence.push(sum)
-    }
-
-    console.log(sequence);
+    let firstKNumber = numbers.slice(0,k)
+    let secondKNumber = numbers.slice(-k)
+    console.log(firstKNumber.join(" "));
+    console.log(secondKNumber.join(" "));
 
 }
-firstAndLastKNumbers(6, 3)
+firstAndLastKNumbers([3,
+    6, 7, 8, 9]
+   )

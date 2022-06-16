@@ -1,10 +1,10 @@
 function test(numbers) {
 
-    let newArray = []
+    let result = numbers.sort((a,b) => a - b).slice(0,2).join(" ")
 
-    let sortedNumbers = numbers.sort((a,b)=> a - b);
-    let slicedNumbers = sortedNumbers.slice(0,2)
-    console.log(slicedNumbers.join(" "));
+    console.log(result);
+
+    
 
 }
 test([3, 0, 10, 4, 7, 3])
