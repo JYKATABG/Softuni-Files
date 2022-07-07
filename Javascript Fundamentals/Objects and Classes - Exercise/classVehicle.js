@@ -1,5 +1,7 @@
+
 class Vehicle {
     constructor(type,model,parts,fuel) {
+
         this.type = type;
         this.model = model;
         this.parts = parts;
@@ -8,13 +10,13 @@ class Vehicle {
     }
 
     drive(lostFuel) {
-         return this.fuel -= lostFuel;
+       return this.fuel -= lostFuel;
     }
 }
 
-let parts = { engine: 6, power: 100 };5
-let vehicle = new Vehicle('a', 'b', parts, 200);
-vehicle.drive(100);
+let parts = {engine: 9, power: 500};
+let vehicle = new Vehicle('l', 'k', parts, 840);
+vehicle.drive(20);
 console.log(vehicle.fuel);
-console.log(vehicle.parts.quality);
+
 
