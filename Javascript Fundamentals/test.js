@@ -1,20 +1,19 @@
-class Vehicle {
-    constructor(type,model,parts,fuel) {
-        this.type = type;
-        this.model = model;
-        this.parts = parts;
-        this.fuel = fuel;
-        this.parts.quality = this.parts.engine * this.parts.power;
+function test(input) {
+
+    let resultObj = {}
+
+    for(let line of input) {
+        let [name,number] = line.split(" ");
+        resultObj[name] = number;
+    }
+    
+    for(let [k,v] of Object.entries(resultObj)) {
+        console.log(`${k} -> ${v}`);
     }
 
-    drive(lostFuel) {
-         return this.fuel -= lostFuel;
-    }
 }
-
-let parts = { engine: 6, power: 100 };5
-let vehicle = new Vehicle('a', 'b', parts, 200);
-vehicle.drive(100);
-console.log(vehicle.fuel);
-console.log(vehicle.parts.quality);
+test(['Tim 0834212554',
+'Peter 0877547887',
+'Bill 0896543112',
+'Tim 0876566344']);
 

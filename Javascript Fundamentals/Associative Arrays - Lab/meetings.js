@@ -3,7 +3,7 @@ function meetings(input) {
     let resultObj = {}
 
     for (let el of input) {
-        let [day, name] = el.split(" ")
+        let [day, name] = el.split(" ");
 
         if (resultObj.hasOwnProperty(day)) {
             console.log(`Conflict on ${day}!`);
