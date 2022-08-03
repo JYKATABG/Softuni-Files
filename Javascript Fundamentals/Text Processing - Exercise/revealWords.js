@@ -5,7 +5,7 @@ function revealWords(word, sentence) {
 
     for(let el of words) {
         for(let word of text) {
-            if(word.startsWith('*') && el.length === word.length) {
+            if(word.includes('*') && el.length === word.length) {
                 sentence = sentence.replace(word, el);
                 break;
             }

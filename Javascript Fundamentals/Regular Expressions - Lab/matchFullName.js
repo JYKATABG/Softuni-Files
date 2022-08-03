@@ -1,14 +1,14 @@
 function matchFullName(input) {
 
-    let pattern = /\b[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}/g;
+    let pattern = /\b[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}/g
     let match = pattern.exec(input);
-    let result = [];
+    let result = []
 
-    while (match !== null) {
-        result.push(match[0]);
+    while(match !== null) {
+        result.push(match)
 
-        match = pattern.exec(input);
+        match = pattern.exec(input)
     }
-    console.log(result.join(" "));
+    console.log(result.join(' '));
 }
 matchFullName("Ivan Ivanov, Ivan ivanov, ivan Ivanov, IVan Ivanov, Test Testov, Ivan	Ivanov");
