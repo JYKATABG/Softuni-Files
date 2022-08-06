@@ -1,53 +1,49 @@
 function test(input) {
 
-    let participants = input.shift().split(', ');
-    let nameMap = new Map();
+    let password = input.shift();
 
-    participants.forEach(person => {
-        nameMap.set(person, 0)
-    });
+    let line = input.shift()
+    while (line !== 'Done') {
+        let [command, ...tokens] = line.split(" ");
+        switch (command) {
+            case "TakeOdd":
+                password = [...password]
+                    .filter((symbol, index) => { return index % 2 !== 0 })
+                    .join('');
+                console.log(password);
+                break;
 
-    let letterPattern = /[A-Za-z]+/g
-    let digitPattern = /\d/g
+            case "Cut":
+                let index = Number(tokens[0])
+                let length = Number(tokens[1])
 
+                const switchSubString = password.substr(index, length)
 
-    for(let i = 0;i < input.length;i++) {
+                password = password.replace(switchSubString, '')
+                console.log(password);
+                break;
 
-        let currentLine = input[i]
-
-        if(currentLine === "end of race") {
-            break;
+            case "Substitute":
+                let substring = tokens[0];
+                let substitute = tokens[1];
+                if (password.includes(substring)) {
+                    password = password.replace(new RegExp(substring, 'g'), substitute)
+                    console.log(password);
+                    break;
+                }
+                console.log('Nothing to replace!');
+                break;
         }
-
-        let name = currentLine.match(letterPattern).join('');
-        let distance = currentLine.match(digitPattern).reduce((a, b) => {
-            return Number(a) + Number(b)
-        });
-        
-        if(nameMap.has(name)) {
-
-            let prevDistance = nameMap.get(name)
-
-            prevDistance += distance
-
-            nameMap.set(name, prevDistance)
-        }
+        line = input.shift();
     }
-    
-    let sortedArray = Array.from(nameMap).sort((a, b) => {
-        return b[1] - a[1]
-    });
-
-    console.log(sortedArray[0][0]);
-    console.log(sortedArray[1][0]);
-    console.log(sortedArray[2][0]);
+    console.log(`Your password is: ${password}`);
 }
-test(['George, Peter, Bill, Tom',
-'G4e@55or%6g6!68e!!@ ',
-'R1@!3a$y4456@',
-'B5@i@#123ll',
-'G@e54o$r6ge#',
-'7P%et^#e5346r',
-'T$o553m&6',
-'end of race'])
+test(["up8rgoyg3r1atmlmpiunagt!-irs7!1fgulnnnqy",
+    "TakeOdd",
+    "Cut 18 2",
+    "Substitute ! ***",
+    "Substitute ? .!.",
+    "Done"])
+
+
 
