@@ -11,15 +11,15 @@ function needForSpeedIII(input) {
 
 
         if (line.includes('|')) {
-            let carInfo = line.split('|')
+            let carInfo = line.split('|');
 
-            let givenVehicle = carInfo[0]
-            let distance = Number(carInfo[1])
-            let fuel = Number(carInfo[2])
+            let givenVehicle = carInfo[0];
+            let distance = Number(carInfo[1]);
+            let fuel = Number(carInfo[2]);
 
-            result.set(givenVehicle, [])
-            result.get(givenVehicle).push(distance)
-            result.get(givenVehicle).push(fuel)
+            result.set(givenVehicle, []);
+            result.get(givenVehicle).push(distance);
+            result.get(givenVehicle).push(fuel);
 
         }
 
@@ -28,37 +28,37 @@ function needForSpeedIII(input) {
 
             if (line.includes('Refuel')) {
 
-                let givenVehicle = carInfo[1]
-                let givenFuel = Number(carInfo[2])
+                let givenVehicle = carInfo[1];
+                let givenFuel = Number(carInfo[2]);
 
                 let tank = result.get(givenVehicle)[1] + givenFuel;
 
                 if (tank > 75) {
-                    result.get(givenVehicle)[1] = 75
+                    result.get(givenVehicle)[1] = 75;
                     tank -= 75
                     console.log(`${givenVehicle} refueled with ${givenFuel - tank} liters`);
                 } else {
-                    result.get(givenVehicle)[1] = tank
+                    result.get(givenVehicle)[1] = tank;
                     console.log(`${givenVehicle} refueled with ${givenFuel} liters`);
                 }
 
             } else if (line.includes('Revert')) {
 
-                let givenVehicle = carInfo[1]
+                let givenVehicle = carInfo[1];
                 let kilometers = Number(carInfo[2]);
 
                 result.get(givenVehicle)[0] -= kilometers;
 
                 if (result.get(givenVehicle)[0] < 10000) {
-                    result.get(givenVehicle)[0] = 10000
+                    result.get(givenVehicle)[0] = 10000;
                 } else {
                     console.log(`${givenVehicle} mileage decreased by ${kilometers} kilometers`);
                 }
             } else if (line.includes('Drive')) {
                 //Drive : {car} : {distance} : {fuel}":
-                let givenVehicle = carInfo[1]
-                let distance = Number(carInfo[2])
-                let fuel = Number(carInfo[3])
+                let givenVehicle = carInfo[1];
+                let distance = Number(carInfo[2]);
+                let fuel = Number(carInfo[3]);
 
                 if (result.get(givenVehicle)[1] > fuel) {
                     result.get(givenVehicle)[0] += distance;

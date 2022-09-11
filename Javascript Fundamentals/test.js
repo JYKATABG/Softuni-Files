@@ -1,8 +1,4 @@
-function test(input) {
+function test() {
 
-  console.log('I love' + input);
 }
-test('JavaScript')
-
-
-
+test()
