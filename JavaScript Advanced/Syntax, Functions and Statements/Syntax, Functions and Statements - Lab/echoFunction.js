@@ -1,15 +1,8 @@
-function echoFunction(firstWord,secondWord,thirdWord) {
+function echoFunction(input) {
 
-    let firstLenght = firstWord.length;
-    let secondLength = secondWord.length;
-    let thirdLenght = thirdWord.length;
+    let textLenght = input.length
+    console.log(textLenght);
+    console.log(input);
 
-    let sum = firstLenght + secondLength + thirdLenght;
-
-    let result = Math.floor(sum / 3);
-
-    console.log(result);
-    console.log(sum);
-   
 }
-echoFunction("pesho","Goshko","sLIVEN")
+echoFunction('Hello, JavaScript!')
