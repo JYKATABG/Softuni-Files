@@ -2,9 +2,8 @@ function sameNumbers(input) {
 
     let isValid = true;
     let sum = 0;
-    let validCount = 0;
     let inputLenght = input.toString();
-    let firstDigit = inputLenght[0]
+    let firstDigit = inputLenght[0];
 
     for (let i = 0; i < inputLenght.length; i++) {
         if (inputLenght[i] !== firstDigit) {
