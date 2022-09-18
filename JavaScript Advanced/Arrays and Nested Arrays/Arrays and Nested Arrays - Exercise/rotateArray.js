@@ -6,10 +6,3 @@ function solve(input, index) {
     }
     console.log(input.join(" "));
 }
-solve(['1',
-    '2',
-    '3',
-    '4'],
-    2
-);
-
