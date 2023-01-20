@@ -1,0 +1,46 @@
+function printDeckCards(cards) {
+    function cardsFactory(face, suit) {
+
+        let validFace = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+        let validSuit = {
+            S: "\u2660",
+            H: "\u2665",
+            D: "\u2666",
+            C: "\u2663"
+        }
+
+        if (!validFace.includes(face)) {
+            throw new Error(`Invalid card: ${face}`)
+        }
+
+        if (!validSuit.includes(suit)) {
+            throw new Error(`Invalid card: ${suit}`)
+        }
+
+        let cardsObj = {
+            face: face,
+            suit: validSuit[suit],
+            toString() {
+                return this.face + this.suit;
+            },
+        }
+        return cardsObj;
+    }
+    let result = [];
+
+    for (let card of cards) {
+        let newFace = card.slice(0, -1);
+        let newSuit = card.slice(-1);
+
+        try {
+            let configureCard = cardsFactory(newFace, newSuit)
+            result.push(configureCard)
+        } catch (error) {
+            result = (`Invalid card: ${card}`)
+        }
+    }
+
+    console.log(result.join(" "));
+}
+
+printDeckCards(['AS', '10D', 'KH', '2C'])

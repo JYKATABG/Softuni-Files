@@ -1,18 +1,19 @@
 function search() {
-   let allTowns = Array.from(document.querySelectorAll('ul li'));
-   let searchText = document.getElementById('searchText').value;
+   let allTowns = document.querySelectorAll("ul li");
+   let search = document.getElementById('searchText').value;
    let count = 0;
 
-   for (let item of allTowns) {
-      let town = item.textContent;
-      if (town.includes(searchText)) {
-         item.style.textDecoration = 'underline'
-         item.style.fontWeight = 'bold'
-         count++
+   for(let element of allTowns) {
+      let town = element.textContent;
+      console.log(town);
+      if(town.includes(search)) {
+         element.style.fontWeight = "bold";
+         element.style.textDecoration = "underline"
+         count++;
       } else {
-         item.style.textDecoration = 'none'
-         item.style.fontWeight = ''
+         element.style.fontWeight = "";
+         element.style.textDecoration = "none"
       }
    }
-   document.getElementById('result').innerText = `${count} matches found`
+   document.getElementById('result').innerHTML = `${count} matches found`;
 }

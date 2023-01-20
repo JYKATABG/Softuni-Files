@@ -1,0 +1,39 @@
+{
+  "cubes": [
+    {
+      "id": "1",
+      "name": "Gan356 Air SM",
+      "description": "test",
+      "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+      "difficultyLevel": "1"
+    },
+    {
+      "id": "2",
+      "name": "Eco-Dark",
+      "description": "test",
+      "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+      "difficultyLevel": "3"
+    },
+    {
+      "id": "3",
+      "name": "Pyraminx",
+      "description": "test",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+      "difficultyLevel": "5"
+    },
+    {
+      "id": "4",
+      "name": "Colorfull Cube",
+      "description": "nqma drug takuv",
+      "imageUrl": "https://media.istockphoto.com/id/483822467/photo/classic-rubiks-cube.jpg?s=612x612&w=0&k=20&c=KQnGh21FJAN7dLFWT0lm05VGniAHHp9Uv-nzda9zyRo=",
+      "difficultyLevel": "2"
+    },
+    {
+      "name": "Hard Cube",
+      "description": "This Cube is really hard to solve because of his size",
+      "imageUrl": "https://i.pinimg.com/originals/0f/3c/6a/0f3c6a11536de3f0bd938ac9049d0d30.jpg",
+      "difficultyLevel": "5",
+      "id": "41"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 function focused() {
-    let inputs = document.getElementsByTagName('input')
+    let inputs = document.querySelectorAll('input');
 
     for(let input of inputs) {
-        input.addEventListener('focus',focusedFunction);
-        input.addEventListener('blur',bluredFunction);
+        input.addEventListener('focus',focusedFunc);
+        input.addEventListener('blur',bluredFunc);
     }
 
-    function focusedFunction(event) {
-        event.target.parentElement.classList.add('focused');
+    function focusedFunc(event) {
+        event.target.parentElement.classList.add('focused')
     }
 
-    function bluredFunction(event) {
-        event.target.parentElement.classList.remove('focused')
+    function bluredFunc(event) {
+        event.target.parentElement.classList.remove('focused');
     }
 }

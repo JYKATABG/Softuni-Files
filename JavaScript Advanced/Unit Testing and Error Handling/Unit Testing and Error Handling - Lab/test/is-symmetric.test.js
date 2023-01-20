@@ -1,28 +1,29 @@
-const { expect } = require('chai');
+const { assert } = require('chai');
 const { isSymmetric } = require('../checkForSymmetry');
 
-describe('isSymmetric', () => {
-    it('Should return false if the input is not an array', () => {
-        let input = "Not array";
-
-        let result = isSymmetric(input);
-
-        expect(result).to.be.false;
+describe('Testing isSymmetric input', () => {
+    it('Should return false if the input is a string', () => {
+        assert.equal(isSymmetric("asdf"), false);
     });
 
-    it('should return true if the input array is symmetric', () => {
-        let input = [1,2,3,3,2,1];
+    it("Should return false if the input in the array is string", () => {
+        assert.equal(isSymmetric([1, 2, "1"]), false);
+    });
 
-        let result = isSymmetric(input);
-
-        expect(result).to.be.true;
-    })
+    it('should return true if the input array is 2', () => {
+        assert.equal(isSymmetric([1, 2, 1]), true);
+    });
 
     it('should return false if the input array is not symmetric', () => {
-        let input = [1,2,3,1,3,2];
 
-        let result = isSymmetric(input);
+        assert.equal(isSymmetric([1, 2, 3]), false);
+    });
 
-        expect(result).to.be.false;
+    it("should return false if the input is number", () => {
+        assert.equal(isSymmetric(2), false)
     })
-})
+
+    it("should return true if the array is symmetric", () => {
+        assert.equal(isSymmetric([1, 2, 2, 1]), true)
+    })
+});

@@ -7,5 +7,5 @@ function addItem() {
     option.value = newItemValue;
     document.getElementById('newItemText').value = "";
     document.getElementById('newItemValue').value = "";
-    menu.appendChild(option);
+    menu.append(option);
 }

@@ -28,8 +28,8 @@ page.start();
 
 function decorateContext(ctx, next) {
 
-    ctx.render = renderMain
-    ctx.updateNav = updateNav
+    ctx.render = renderMain;
+    ctx.updateNav = updateNav;
 
     next()
 }
@@ -44,7 +44,7 @@ function updateNav() {
     if (user) {
         document.querySelector('.user').style.display = 'block';
         document.querySelector('.guest').style.display = 'none';
-        document.querySelector('.user span').textContent = `Welcome, ${user.email}`
+        document.querySelector('.user span').textContent = `Welcome, ${user.email}`;
     } else {
         document.querySelector('.user').style.display = 'none';
         document.querySelector('.guest').style.display = 'block';
@@ -54,5 +54,5 @@ function updateNav() {
 function onLogout() {
     logout();
     updateNav();
-    page.redirect('/')
+    page.redirect('/');
 }

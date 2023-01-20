@@ -15,15 +15,17 @@
 
 function attachGradientEvents() {
     let gradient = document.getElementById('gradient');
-    gradient.addEventListener('mousemove', gradientMove);
-    gradient.addEventListener('mouseout', gradientOut)
 
-    function gradientMove(event) {
+    gradient.addEventListener('mousemove',overFunc);
+    gradient.addEventListener('mouseout',outFunc);
+
+    function overFunc(event) {
         let power = event.offsetX / (event.target.clientWidth - 1);
         power = Math.trunc(power * 100);
         document.getElementById('result').textContent = power + "%";
     }
-    function gradientOut(event) {
+
+    function outFunc(event) {
         document.getElementById('result').textContent = "";
     }
 }

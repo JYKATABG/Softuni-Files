@@ -1,16 +1,16 @@
 function addItem() {
-    let inputItemText = document.getElementById('newItemText');
-    let allWords = document.getElementById('items');
-
+    let items = document.getElementById("items");
+    let newItemText = document.getElementById("newItemText").value;
     let li = document.createElement('li');
-    li.innerText = inputItemText.value;
-    allWords.appendChild(li);
-
     let a = document.createElement('a');
+    li.textContent = newItemText;
     a.textContent = "[Delete]"
     a.href = "#";
-    a.addEventListener('click', function () {
-        allWords.removeChild(li);
-    })
+    a.addEventListener("click",hideRow)
     li.appendChild(a);
+    items.appendChild(li);
+
+    function hideRow(event) {
+        event.target.parentElement.remove();
+    }
 }

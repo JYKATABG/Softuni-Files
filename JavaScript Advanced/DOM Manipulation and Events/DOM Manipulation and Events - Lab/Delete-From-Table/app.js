@@ -16,18 +16,16 @@
 
 //Option 2
 function deleteByEmail() {
-    let email = document.getElementsByName('email')[0].value;
-    let allCustomers = document.querySelectorAll('tr td:nth-child(2)');
+    let allCustomers = document.querySelectorAll("tr td:nth-child(2)");
+    let inputEmail = document.getElementsByName("email")[0].value
     let isDeleted = false;
-
-    for(let customer of allCustomers) {
-        if(customer.textContent === email) {
-            customer.parentElement.remove();
+    
+    for(let email of allCustomers) {
+        if(email.textContent === inputEmail) {
+            email.parentElement.remove();
             isDeleted = true;
         }
     }
-
-    let result = isDeleted ? "Deleted" : "Not found"
-    document.getElementById('result').textContent = result;
+    let result = document.getElementById("result");
+    result.textContent = isDeleted ? "Deleted" : "Not found";
 }
-deleteByEmail()

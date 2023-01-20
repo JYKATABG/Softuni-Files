@@ -1,26 +1,27 @@
 function solve() {
-  let text = document.getElementById("text").value;
-  let convection = document.getElementById("naming-convention").value;
-  let textArray = text.split(' ');
+  let text = document.getElementById('text').value;;
+  let convention = document.getElementById('naming-convention').value;
+  let allWords = text.split(" ");
   let res = "";
 
-  switch (convection) {
+  switch(convention) {
     case "Camel Case":
-      textArray.forEach((e, i) => {
-        if (i === 0) {
+      allWords.forEach((e,i) => {
+        if(i === 0) {
           return res += e.toLowerCase();
+        } else {
+          return res += e[0].toUpperCase() + e.substring(1).toLowerCase();
         }
-        return res += e[0].toUpperCase() + e.substring(1).toLowerCase();
       })
-      //debugger
       break;
 
     case "Pascal Case":
-      textArray.forEach((e, i) => {
+      allWords.forEach((e,i) => {
         return res += e[0].toUpperCase() + e.substring(1).toLowerCase();
       })
       break;
-    default: res = "Error!"
+
+    default:res = "Error!";
   }
-  document.getElementById("result").textContent = res;
+  document.getElementById('result').innerText = res;
 }

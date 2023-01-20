@@ -1,31 +1,32 @@
 function encodeAndDecodeMessages() {
-   let buttons = document.getElementsByTagName('button');
-   buttons[0].addEventListener('click',encodeText);
-   buttons[1].addEventListener('click',decodeText);
+    let allButtons = document.querySelectorAll('button');
+    allButtons[0].addEventListener("click",encodeFunc);
+    allButtons[1].addEventListener("click",decodeFunc);
 
-   function encodeText() {
-    let textAreas = document.querySelectorAll('textarea');
-    let encodeMsg = "";
-    let encodeText = textAreas[0].value;
-    for(let i = 0;i < encodeText.length;i++) {
-        let encodeCh = encodeText[i].charCodeAt();
-        encodeMsg += String.fromCharCode(encodeCh + 1);
+    function encodeFunc() {
+        let allTextAreas = document.querySelectorAll("textarea")
+        let encodeTextArea = allTextAreas[0].value;
+        let encodeMsg = ""
+        for(let i = 0;i < encodeTextArea.length;i++) {
+            let encodeCh = encodeTextArea[i].charCodeAt();
+            encodeMsg += String.fromCharCode(encodeCh + 1);
+        }
+
+        let textArea = allTextAreas[0];
+        textArea.value = "";
+        let secondTextArea = allTextAreas[1];
+        secondTextArea.value = encodeMsg;
     }
 
-    let currentArea = textAreas[0];
-    currentArea.value = "";
-    let dropArea = textAreas[1];
-    dropArea.value = encodeMsg;
-   }
-
-   function decodeText(event) {
-    let currentTextArea = event.target.parentElement.getElementsByTagName('textarea')[0];
-    let decodeText = currentTextArea.value;
-    let decodeMsg = "";
-    for(let i = 0;i < decodeText.length;i++) {
-        let decodeCh = decodeText[i].charCodeAt();
-        decodeMsg += String.fromCharCode(decodeCh - 1);
+    function decodeFunc(event) {
+        let textArea = event.target.parentElement.querySelector('textarea');
+        let decodeTextArea = textArea.value;
+        let decodeMsg = "";
+        for(let i = 0;i < decodeTextArea.length;i++) {
+            let decodeCh = decodeTextArea[i].charCodeAt();
+            decodeMsg += String.fromCharCode(decodeCh - 1);
+        }
+        
+        textArea.value = decodeMsg;
     }
-    currentTextArea.value = decodeMsg;
-   }
 }
