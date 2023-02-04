@@ -1,11 +1,13 @@
 const config = {
     production: {
         PORT: 1234,
-        DB_URI: 'mongodb://localhost:27017/cubicle'
+        DB_URI: 'mongodb://localhost:27017/cubicle',
+        SECRET: 'SOMEPRODSECRET'
     },
     development: {
         PORT: 5000,
-        DB_URI: 'mongodb://localhost:27017/cubicle'
+        DB_URI: 'mongodb://localhost:27017/cubicle',
+        SECRET: 'SOMEDEVSECRET'
     }
 };
 

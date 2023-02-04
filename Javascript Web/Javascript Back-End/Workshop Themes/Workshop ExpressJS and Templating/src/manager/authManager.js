@@ -1,4 +1,7 @@
 const User = require('../models/User.js');
+const config = require('../config/config.js');
+
+const jwt = require('../lib/jsonwebtoken.js');
 
 exports.getUserByUsername = (username) => User.findOne({ username });
 
@@ -11,6 +14,8 @@ exports.login = async (username, password) => {
     if (!user || !isValid) {
         throw 'Invalid username or password!';
     }
+    const payload = { username: user.username };
+    const token = await jwt.sign(payload, config.SECRET, { expiresIn: '2h' });
 
-    return user;
+    return token;
 };
