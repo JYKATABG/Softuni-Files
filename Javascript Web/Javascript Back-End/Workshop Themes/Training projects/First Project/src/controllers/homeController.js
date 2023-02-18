@@ -1,17 +1,15 @@
 const Cube = require('../models/Cube.js');
+const router = require('express').Router();
 
 
-exports.getHomePage = async (req, res) => {
+router.get('/', async (req, res) => {
+    const cubes = await Cube.find().lean();
 
-    let cubes = await Cube.find().lean();
+    res.render('home', { cubes });
+});
 
-    res.render('index', { cubes });
-}
-
-exports.getAboutPage = (req, res) => {
+router.get('/about', (req, res) => {
     res.render('about');
-}
+})
 
-exports.getErrorPage = (req, res) => {
-    res.render('404');
-}
+module.exports = router;

@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 
-const config = require('./index.js');
 async function databaseInit() {
     mongoose.set('strictQuery', false);
-    
-    await mongoose.connect(config.DB_URI);
+
+    await mongoose.connect('mongodb://127.0.0.1:27017/cube');
 
     console.log('Database connected');
 }

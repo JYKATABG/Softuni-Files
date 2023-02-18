@@ -1,12 +1,11 @@
 const handlebars = require('express-handlebars');
 
 function setupViewEngine(app) {
-
     app.engine('hbs', handlebars.engine({
-        extname: 'hbs',
+        extname: 'hbs'
     }));
-    app.set('view engine', 'hbs') //TODO
-    app.set('views', './src/views')
+    app.set('view engine', 'hbs');
+    app.set('views', './src/views');
 }
 
 module.exports = setupViewEngine;

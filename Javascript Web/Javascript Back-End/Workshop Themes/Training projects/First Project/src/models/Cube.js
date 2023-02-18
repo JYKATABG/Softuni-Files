@@ -12,19 +12,15 @@ const cubeSchema = new mongoose.Schema({
     },
     imageUrl: {
         type: String,
-        required: true
-        //http && https validation
+        required: true,
+        //https validation
     },
     difficultyLevel: {
         type: Number,
         required: true,
         min: 1,
         max: 6
-    },
-    accessories: [{
-        type: mongoose.Types.ObjectId,
-        ref: 'Accessory'
-    }]
+    }
 })
 
 const Cube = mongoose.model('Cube', cubeSchema);
