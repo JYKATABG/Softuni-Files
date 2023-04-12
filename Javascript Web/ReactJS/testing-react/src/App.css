@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    background: linear-gradient(to left, blue, orange);
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.question-card {
+    background-color: gray;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: 16px;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: darkgray;
+    padding: 16px;
+    border: 3px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+li:hover {
+    color: black;
+    background-color: #fff;
+}
+
+.question-text {
+    color: darkblue;
+    font-size: 24px;
+}
+
+.finalResult {
+    background-color: gray;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: 16px;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+button {
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: none;
+    padding: 10px;
+    background-color: red;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    transition: all .3 ease;
+}
+
+button:hover {
+    transform: scale(1.2);
+}

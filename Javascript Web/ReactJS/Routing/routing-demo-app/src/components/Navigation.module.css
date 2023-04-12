@@ -1,0 +1,22 @@
+.navigation {
+    text-align: center;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation li{
+    list-style: none;
+    display: inline;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    width: 0%;
+}
+
+.navigation a:hover {
+    color: #D1871D;
+    text-decoration: underline;
+}

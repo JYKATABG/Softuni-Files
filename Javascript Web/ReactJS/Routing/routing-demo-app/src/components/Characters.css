@@ -1,0 +1,15 @@
+.characters {
+    color: white;
+    margin: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.characters:hover {
+    text-decoration: underline;
+    color: #D1871D;
+}
+
+h1 {
+    margin-left: 50px;
+}

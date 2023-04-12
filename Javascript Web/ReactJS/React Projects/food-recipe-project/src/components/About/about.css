@@ -1,0 +1,28 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} */
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85vh;
+}
+
+.about-msg {
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+    margin: 20px;
+}
+
+.about-msg h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+

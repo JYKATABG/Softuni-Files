@@ -40,7 +40,7 @@
 14. Logout
 15. Authorization middleware
 16. Dynamic navigation
-17. Error handling (local error handling) - error container
+17. Error handling (local error handling)
 18. Add error notification to main layout
 19. Login automatically after register
 20. Parse errors
@@ -71,7 +71,7 @@
     * use export in action
     * setup hbs in view / check if item is found
 7. Setup details page
-8. Setup item action - object in array
+8. Setup item action
 9. Setup edit
     * setup paths 
     * make actions
