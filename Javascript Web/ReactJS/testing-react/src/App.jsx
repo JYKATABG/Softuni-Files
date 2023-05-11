@@ -1,120 +1,54 @@
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [showFinalResults, setFinalResults] = useState(false);
-  const [score, setScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] = useState("");
 
-  const questions = [
-    {
-      text: "What is the capital of America?",
-      options: [
-        { id: 0, text: "New York City", isCorrect: false },
-        { id: 1, text: "Boston", isCorrect: false },
-        { id: 2, text: "Santa Fe", isCorrect: false },
-        { id: 3, text: "Washington DC", isCorrect: true },
-      ],
-    },
-    {
-      text: "What year was the Constitution of America written?",
-      options: [
-        { id: 0, text: "1787", isCorrect: true },
-        { id: 1, text: "1776", isCorrect: false },
-        { id: 2, text: "1774", isCorrect: false },
-        { id: 3, text: "1826", isCorrect: false },
-      ],
-    },
-    {
-      text: "Who was the second president of the US?",
-      options: [
-        { id: 0, text: "John Adams", isCorrect: true },
-        { id: 1, text: "Paul Revere", isCorrect: false },
-        { id: 2, text: "Thomas Jefferson", isCorrect: false },
-        { id: 3, text: "Benjamin Franklin", isCorrect: false },
-      ],
-    },
-    {
-      text: "What is the largest state in the US?",
-      options: [
-        { id: 0, text: "California", isCorrect: false },
-        { id: 1, text: "Alaska", isCorrect: true },
-        { id: 2, text: "Texas", isCorrect: false },
-        { id: 3, text: "Montana", isCorrect: false },
-      ],
-    },
-    {
-      text: "Which of the following countries DO NOT border the US?",
-      options: [
-        { id: 0, text: "Canada", isCorrect: false },
-        { id: 1, text: "Russia", isCorrect: true },
-        { id: 2, text: "Cuba", isCorrect: true },
-        { id: 3, text: "Mexico", isCorrect: false },
-      ],
-    },
-  ];
+  //Helper functions
 
-  // Helper functions
+  const handleChange = () => {
+    if (newTodo === "") return alert("Type a task");
 
-  const optionClicked = (isCorrect) => {
-    if (isCorrect) {
-      setScore((score) => score + 1);
-    }
-
-    if (currentQuestion + 1 < questions.length) {
-      setCurrentQuestion((question) => question + 1);
+    if (!todos.includes(newTodo)) {
+      setTodos((prevTodo) => [newTodo, ...prevTodo]);
+      setNewTodo("");
     } else {
-      setFinalResults(true);
+      alert("This task already exists");
     }
   };
 
-  const restartGame = () => {
-    setScore(0);
-    setCurrentQuestion(0);
-    setFinalResults(false);
+  const deleteTask = (listTodo) => {
+    setTodos((todo) => todo.filter((x) => x === listTodo));
   };
 
   return (
     <div className="App">
-      {/* Header */}
-      <h1 className="heading">USA Quiz</h1>
-
-      {/* Current score */}
-      <h2>Current score: {score}</h2>
-
-      {showFinalResults ? (
-        <div className="finalResult">
-          <h1>Final results</h1>
-          <h2>
-            {score} out of {questions.length} correct - (
-            {(score / questions.length) * 100}%)
-          </h2>
-
-          <button onClick={() => restartGame()}>Restart game</button>
+      <div className="container">
+        <div className="input-data">
+          <input
+            type="text"
+            placeholder="your task..."
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
+          />
+          <button onClick={handleChange}>Add Todo</button>
         </div>
-      ) : (
-        <div className="question-card">
-          <h2>
-            Question {currentQuestion + 1} out of {questions.length}
-          </h2>
-          <h3 className="question-text">{questions[currentQuestion].text}</h3>
-
+        <div className="all-todos">
           <ul>
-            {questions[currentQuestion].options.map((option) => {
+            {todos.length === 0 && <h1>The list is empty :(</h1>}
+
+            {todos.map((todo) => {
               return (
-                <li
-                  onClick={() => optionClicked(option.isCorrect)}
-                  key={option.id}
-                >
-                  {option.text}
-                </li>
+                <div className="single-todo">
+                  <li key={Math.random() * 10}>{todo}</li>
+                  <button onClick={() => deleteTask(todo)}>X</button>
+                </div>
               );
             })}
           </ul>
         </div>
-      )}
-
-      {/* Final results */}
+      </div>
     </div>
   );
 }
