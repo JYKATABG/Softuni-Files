@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #CCC;
+    text-align: center;
+}
+
+body>header {
+    margin-top: 15px;
+    background: url(https://i.pinimg.com/originals/22/05/a1/2205a138a839c5b6c60590855ee4a396.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin: 0;
+}
+
+header h1 {
+    background-color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 40, 40);
+    height: 400px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.second-heading {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+article {
+    width: 490px;
+}
+
+article ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article ul li>p {
+    margin: 5px;
+    padding: 0;
+}
