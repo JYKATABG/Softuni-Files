@@ -1,0 +1,19 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 750px;
+
+}
+
+header,
+section {
+    margin-left: 20px;
+}
+
+article>ul {
+    margin-top: 10px;
+}
+
+ul li {
+    margin: 25px;
+}
