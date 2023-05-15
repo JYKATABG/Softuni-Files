@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 970px;
+    margin: auto;
+    background-color: #e4e7fa;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #4569e5;
+}
+
+header hr {
+    height: 1px;
+    background-color: #59aedc;
+    border: none;
+}
+
+header p {
+    color: #e30428;
+    text-align: justify;
+}
+
+article h3 {
+    color: #0035ae;
+}
+
+article ul li {
+    color: #e30428;
+}
