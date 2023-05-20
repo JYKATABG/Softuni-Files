@@ -49,6 +49,10 @@ header h2 {
     border: none;
 }
 
+i {
+    padding-right: 5.14px;
+}
+
 .a-hover:hover {
     border-color: rgb(0, 102, 0);
     color: rgb(0, 102, 0);
