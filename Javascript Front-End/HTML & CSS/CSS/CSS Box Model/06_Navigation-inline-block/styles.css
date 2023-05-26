@@ -1,0 +1,47 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0.6em;
+}
+
+header li a {
+    text-decoration: none;
+    color: #a4c9a0;
+}
+
+header h1 {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 2em;
+    margin-right: 1.5em;
+    font-size: 2.5em;
+}
+
+header {
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    display: inline-block;
+}
+
+main {
+    line-height: 1.5;
+}
+
+main h1 {
+    font-weight: 500;
+}
+
+p {
+    padding-bottom: 0.8em;
+    font-size: 18px;
+}
