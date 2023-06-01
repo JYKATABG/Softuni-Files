@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.container .week {
+    display: flex;
+}
+
+.container .row {
+    display: flex;
+    height: 15em;
+}
+
+.container .days {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    border: 1px solid #000;
+    flex: 1 0 100%;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.day {
+    border: 1px solid #000;
+    flex-grow: 1;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.special-dates,
+.reminders {
+    border: 1px solid #000;
+    text-transform: uppercase;
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 0.5em;
+}

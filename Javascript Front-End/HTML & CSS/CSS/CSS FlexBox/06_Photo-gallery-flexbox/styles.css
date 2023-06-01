@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    padding: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    border: 8px solid rgb(0, 0, 0);
+    background-color: #fff;
+    width: 350px;
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
