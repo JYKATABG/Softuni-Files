@@ -1,0 +1,27 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+span:nth-child(1) {order: 9;}
+span:nth-child(3) {order: 3;}
+span:nth-child(2) {order: 9;}
+
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 15vw;
+    height: 20rem;
+    gap: 1rem;
+}
+
+span {
+    display: block;
+    border: 1px black solid;
+    flex: 0 0 auto;
+    width: 3em;
+    text-align: center;
+}

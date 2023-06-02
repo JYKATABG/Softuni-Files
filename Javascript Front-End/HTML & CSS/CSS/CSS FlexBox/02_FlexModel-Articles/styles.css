@@ -6,11 +6,19 @@ html {
 h2 {
     font-family: Georgia, serif;
     line-height: 1.2;
+    font-weight: normal;
+    font-size: 2.2em;
 }
 
 section {
-    margin: auto;
+    margin: 5em auto;
     display: flex;
     justify-content: space-between;
     max-width: 70vw;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+section article {
+    flex: 1 1 15em;
 }
