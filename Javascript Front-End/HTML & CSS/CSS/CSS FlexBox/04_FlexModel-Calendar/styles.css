@@ -1,47 +1,53 @@
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-}
-
-html {
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.container .week {
-    display: flex;
+body {
+    font: 10px/1.5 Verdana, sans-serif;
 }
 
-.container .row {
+div,
+section {
     display: flex;
-    height: 15em;
+    align-items: center;
 }
 
-.container .days {
-    flex-grow: 1;
-    display: flex;
+.container {
+    max-width: 65vw;
+    align-items: stretch;
+}
+
+.week {
     flex-wrap: wrap;
 }
 
-.title {
-    border: 1px solid #000;
-    flex: 1 0 100%;
-    padding: 1em 2em;
-    text-align: center;
-}
-
-.day {
-    border: 1px solid #000;
+span {
+    display: block;
+    padding: 1em;
     flex-grow: 1;
-    padding: 1em 2em;
+    height: 10em;
     text-align: center;
 }
 
-.special-dates,
-.reminders {
+.week span:nth-child(1),
+.week span:nth-child(9) {
+    flex-basis: 100%;
+}
+
+.week span:nth-child(7) {
+    order: 1;
+}
+
+.week span:nth-child(8) {
+    order: 2;
+}
+
+section>span {
     border: 1px solid #000;
-    text-transform: uppercase;
-    flex: 0 0 20%;
-    text-align: center;
-    padding: 0.5em;
+}
+
+.notes {
+    flex-direction: column;
 }
