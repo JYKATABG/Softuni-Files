@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+}
+
+ul {
+    width: 200px;
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin: 1em;
+}
+
+ul li i {
+    color: #262626;
+    background-color: lightgray;
+    padding: 1em;
+    border-radius: 50%;
+}
+
+ul li:nth-child(1) i:hover {
+    color: rgb(70, 70, 218);
+}
+
+ul li:nth-child(2) i:hover {
+    color: lightskyblue;
+}
+
+ul li:nth-child(3) i:hover {
+    color: brown;
+}
+
+ul li:nth-child(4) i:hover {
+    color: rgb(47, 130, 232);
+}
+
+ul li:nth-child(5) i:hover {
+    color: rgb(109, 157, 214);
+}

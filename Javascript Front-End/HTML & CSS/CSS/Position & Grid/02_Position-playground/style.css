@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-1 {
+    background: linear-gradient(to right, #1b619d, #41c9a1);
+    height: 450px;
+}
+
+.card-2 {
+    background: linear-gradient(to right, #aa3672, #d27f15);
+    height: 600px;
+}
+
+.viewport .card img {
+    position: absolute;
+    margin: 2em auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.picture-1 img {
+    position: relative;
+}
+
+.card img {
+    width: 350px;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-1 img {
+    display: block;
+}
+
+.card-1 i {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
