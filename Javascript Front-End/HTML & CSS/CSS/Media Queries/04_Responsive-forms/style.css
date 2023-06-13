@@ -1,0 +1,166 @@
+@import url("https://use.fontawesome.com/releases/v6.1.2/css/all.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 18px/1.5 Helvetica, sans-serif;
+    padding: 2em;
+}
+
+form {
+    background-color: #f8f8f8;
+    width: 50%;
+    padding: 0 1em 1em 0.5em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    /* box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.2); */
+}
+
+form h4 {
+    background-color: #f8f8f8;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 50%;
+    padding: 0.4em 1em;
+    position: relative;
+    top: -23px;
+    left: -10px;
+    font-weight: 500;
+}
+
+form .row {
+    padding-bottom: 1.5em;
+}
+
+form label {
+    font-weight: bold;
+    margin: 0 0.2em 0 0.5em;
+}
+
+form input {
+    padding: 0.5em;
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d9d9d9;
+}
+
+form .row i {
+    position: absolute;
+    padding: 6px 0 0 10px;
+}
+
+form .login-button {
+    cursor: pointer;
+    display: block;
+    width: 18%;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.8em 1em;
+    background-color: #2d2d2d;
+    margin: 0 0 1em 0.5em;
+}
+
+@media (width < 767px) {
+    body {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media (width >= 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+
+    form {
+        width: 70%;
+    }
+
+    form h4 {
+        width: 45%;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0.5em 0 0 1em;
+    }
+
+    form input {
+        width: 95%;
+        padding: 1em 0;
+    }
+
+    form .row i {
+        padding-top: 1.5em;
+        padding-left: 0.8em;
+    }
+
+    form .login-button {
+        margin-left: 1.3em;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    form {
+        width: 60%;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form .row i {
+        padding: 1em 14em 1em 0;
+    }
+
+    form .row input {
+        width: 85%;
+        margin-right: 1.5em;
+    }
+
+    form .login-button {
+        font-size: 15px;
+        margin-left: 1.5em;
+    }
+}
+
+@media (width > 1300px) {
+    form {
+        width: 35%;
+    }
+
+    form h4 {
+        width: 35%;
+    }
+
+    form .row i {
+        position: absolute;
+        padding-right: 18em;
+    }
+
+    form .login-button {
+        width: 15%;
+    }
+}
