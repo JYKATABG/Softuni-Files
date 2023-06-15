@@ -127,6 +127,7 @@ h3 {
 }
 
 .right-section .calculate-btn {
+    cursor: pointer;
     margin-top: 3em;
     border: none;
     outline: none;
