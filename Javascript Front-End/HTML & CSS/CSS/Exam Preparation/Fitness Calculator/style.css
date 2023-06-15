@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 15px/1.5 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid #939393;
+}
+
+h1,
+h3 {
+    font-weight: 600;
+}
+
+.left-section {
+    width: 550px;
+}
+
+.left-section img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.right-section {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #F6F7F8;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+
+.right-section header h1 {
+    padding: 2em;
+    font-size: 25px;
+}
+
+.right-section .units {
+    display: flex;
+    justify-content: center;
+    gap: 8.5em;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.right-section .units button:first-child {
+    cursor: pointer;
+    padding: 0.7em 1em;
+    background-color: #86D862;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.right-section .units button:nth-child(2) {
+    cursor: pointer;
+    padding: 0.7em 2em;
+    outline: none;
+    font-size: 14px;
+    background-color: #e0e0df;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-right: 1em;
+}
+
+
+.right-section .gender h3 {
+    margin-bottom: 0.8em;
+}
+
+.right-section select {
+    width: 30%;
+    margin-right: 2em;
+}
+
+.right-section .weight h3 {
+    margin: 1em 0 1em 0;
+}
+
+.right-section .weight input {
+    width: 80%;
+    padding: 0.5em;
+}
+
+.right-section .height h3 {
+    margin: 1em;
+}
+
+.right-section .height input {
+    width: 41%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #e0e0df;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+.right-section .calculate-btn {
+    margin-top: 3em;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #05a2d3;
+    padding: 0.8em;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 90%;
+    box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.3);
+}
