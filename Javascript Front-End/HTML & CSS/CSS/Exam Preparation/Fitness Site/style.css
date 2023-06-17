@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 12px/1.5 'PT Sans', sans-serif, 'PT Serif', serif;
+}
+
+.top-bar {
+    background-color: red;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 3em 0 3em;
+}
+
+.top-bar .phone i,
+.top-bar .address i {
+    padding-right: 0.5em;
+}
+
+.socials {
+    display: flex;
+    gap: 0.5em;
+    list-style: none;
+}
+
+.socials i {
+    color: #fff;
+}

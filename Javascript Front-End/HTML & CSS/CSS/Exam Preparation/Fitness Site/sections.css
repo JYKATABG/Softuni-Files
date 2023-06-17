@@ -1,0 +1,109 @@
+.section-banner {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 8em;
+    gap: 2em;
+    padding-bottom: 8em;
+}
+
+.section-banner a {
+    display: inline-block;
+    background-color: red;
+    padding: 0.5em 1em;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3em;
+    font-weight: bold;
+}
+
+.section-banner h2 {
+    font-size: 2.8em;
+    letter-spacing: 10px;
+}
+
+.section-banner p {
+    max-width: 28em;
+}
+
+[class*="section-"] header h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+[class*="section-"] header h2::after {
+    display: block;
+    content: '';
+    width: 1.6em;
+    height: 3px;
+    border-radius: 2px;
+    margin: 1em auto;
+    background-color: rgba(210, 61, 97, 1);
+}
+
+.section-welcome,
+.section-coaches {
+    padding: 4em 4em;
+}
+
+.section-coaches {
+    background-color: #efefef;
+}
+
+.section-welcome {
+    background: #fff;
+    min-height: 10em;
+}
+
+.section-welcome .columns img {
+    width: 4em;
+    margin: 0 auto;
+}
+
+.columns {
+    display: flex;
+    gap: 10em;
+}
+
+.columns img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.columns li,
+.columns span {
+    display: block;
+}
+
+.columns li {
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.columns .title {
+    color: rgba(210, 61, 97, 1);
+    font-weight: bold;
+    padding: 0.5em 0;
+}
+
+.columns .name {
+    font-weight: bold
+}
+
+.columns .desc {
+    color: #333;
+    line-height: 1.2;
+}
+
+.section-coaches .columns img {
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+}
+
+.section-coaches .columns .desc {
+    color: #999;
+}
