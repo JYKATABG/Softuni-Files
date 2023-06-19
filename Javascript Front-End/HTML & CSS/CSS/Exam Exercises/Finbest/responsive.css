@@ -1,0 +1,66 @@
+@media (width <=600px) {
+
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav {
+        font-size: 10px;
+        justify-content: space-evenly;
+        padding: 2em 0;
+    }
+
+    .account-buttons {
+        font-size: 10px;
+    }
+
+    .section-banner {
+        text-align: center;
+    }
+
+    .section-banner h1 {
+        font-size: 25px;
+        max-width: 25em;
+    }
+
+    .section-plans {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pricing-section {
+        flex-direction: column;
+        min-width: 500px;
+        /* width: 500px; */
+    }
+
+    .pricing-plans {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .section-plans .contact-us {
+        text-align: center;
+        min-width: 550px;
+        border-radius: 10px;
+    }
+
+    .contact-us p {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    .contact-us .contact-button {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 5em;
+    }
+
+    .section-outro {
+        margin-top: 100em;
+    }
+}

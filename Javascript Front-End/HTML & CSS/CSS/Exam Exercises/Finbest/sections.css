@@ -1,0 +1,315 @@
+.section-banner {
+    background-color: #ade2df;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-banner h1 {
+    font-size: 4.5em;
+    font-weight: 500;
+}
+
+.section-banner p {
+    font-size: 16px;
+}
+
+.section-banner .download-buttons button {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 1em 1.5em;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.section-banner .download-buttons i {
+    padding-right: 10px;
+}
+
+.section-card-info {
+    min-height: 350px;
+}
+
+.section-card-info .card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    height: 300px;
+}
+
+.card-list h2 {
+    font-size: 30px;
+}
+
+.card-list p {
+    font-size: 20px;
+}
+
+.section-card-info .card-list .card {
+    border-left: 1px solid gray;
+    padding: 10px;
+    height: 200px;
+}
+
+.section-card-info .card-list .card:nth-child(3) {
+    border-right: 1px solid gray;
+}
+
+.card-list .card p {
+    max-width: 20em;
+    padding-top: 2em;
+}
+
+.section-benefits {
+    background-color: #ade2df;
+    max-height: 700px;
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    align-items: center;
+}
+
+.section-benefits img {
+    display: block;
+    width: 300px;
+    height: auto;
+    border-left: 1px dotted gray;
+    border-right: 1px dotted gray;
+}
+
+.section-benefits .content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.section-benefits .content h3 {
+    font-size: 40px;
+    font-weight: 500;
+    max-width: 15em;
+}
+
+.section-benefits .content-heading {
+    font-weight: bold;
+}
+
+.content .first-row p:nth-child(2) {
+    max-width: 33em;
+}
+
+.content .explore-btn {
+    color: #000;
+    text-decoration: none;
+}
+
+.content i {
+    padding-left: 5px;
+}
+
+.content .explore-btn::after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 11em;
+    background-color: #000;
+}
+
+.section-plans {
+    height: 800px;
+    background-color: #f3f5fa;
+}
+
+.pricing-header {
+    height: 200px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pricing-header .pricing-button {
+    padding: 0.5em 0.8em;
+    background-color: #ade2df;
+    border: none;
+    border-radius: 5px;
+}
+
+.pricing-header h4 {
+    font-size: 30px;
+}
+
+.pricing-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-plans {
+    display: flex;
+}
+
+.pricing-plans .plan {
+    background-color: #fff;
+    border-right: 1px solid gray;
+    height: 500px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.pricing-plans .plan:nth-child(3) {
+    border-right: none;
+}
+
+.plan .plan-heading h4 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.plan .plan-heading p {
+    max-width: 15em;
+}
+
+.plan .plan-heading .price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.plan-heading .price p {
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.plan .plan-heading::after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 16em;
+    border-radius: 2px;
+    margin: 0.5em 0;
+    background-color: gray;
+}
+
+.plan .plan-heading h5 {
+    font-size: 35px;
+    padding: 0.5em 0;
+}
+
+.plan .plan-desc ul {
+    list-style: none;
+}
+
+.plan-desc ul li {
+    padding: 0.4em 0;
+}
+
+.plan-desc i {
+    padding-right: 5px;
+}
+
+.plan button {
+    cursor: pointer;
+    padding: 1.8em 4.5em;
+    width: 20em;
+    border: none;
+    outline: none;
+    background-color: #ade2df;
+    border-radius: 10px;
+}
+
+.contact-us {
+    background-color: #ade2df;
+    flex-grow: 1;
+    height: 500px;
+    padding-left: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-us h5 {
+    text-align: center;
+    padding: 1em 0 0 0;
+    font-size: 18px;
+}
+
+.contact-us p {
+    font-size: 30px;
+    font-weight: 500;
+    max-width: 20em;
+}
+
+.contact-us ul {
+    list-style: none;
+}
+
+.contact-us li {
+    margin-top: 1em;
+    padding: 0.2em;
+}
+
+.contact-us i {
+    padding-right: 5px;
+}
+
+.contact-button {
+    cursor: pointer;
+    width: 58em;
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.section-outro {
+    height: 350px;
+    background-color: #ade2df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-outro h1 {
+    font-size: 40px;
+    max-width: 10em;
+    text-align: center;
+}
+
+.section-outro p {
+    max-width: 32em;
+    text-align: center;
+}
+
+.section-outro .download-buttons button {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 1em 1.5em;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.section-outro .download-buttons i {
+    padding-right: 10px;
+}

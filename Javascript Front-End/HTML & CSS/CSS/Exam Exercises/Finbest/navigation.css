@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 10em 2.5em 10em;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav .account-buttons .log-in {
+    padding-right: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav .account-buttons .sign-up {
+    text-decoration: none;
+    color: #000;
+    background-color: #ade2df;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
