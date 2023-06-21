@@ -16,4 +16,14 @@ function getLength(arr) {
     });
     return sum;
 }
+function searchName(names) {
+    for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
+        var name_1 = names_1[_i];
+        if (name_1 === "Sasho") {
+            names.push("Ivancho");
+        }
+    }
+    return names.join(", ");
+}
+console.log(searchName(["Pesho", "Sasho", "Boris", 0, 5]));
 console.log(getLength([3, 4, 5]));

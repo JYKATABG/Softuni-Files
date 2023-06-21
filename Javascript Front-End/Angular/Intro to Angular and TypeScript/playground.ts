@@ -29,4 +29,15 @@ function getLength(arr: number[]) {
   return sum;
 }
 
+function searchName(names) {
+  for (let name of names) {
+    if (name === "Sasho") {
+      names.push("Ivancho");
+    }
+  }
+  return names.join(", ");
+}
+
+console.log(searchName(["Pesho", "Sasho", "Boris", 0, 5]));
+
 console.log(getLength([3, 4, 5]));
