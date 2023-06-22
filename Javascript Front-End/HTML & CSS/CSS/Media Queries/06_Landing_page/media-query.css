@@ -1,0 +1,21 @@
+@media (width <=600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-info p {
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .service-info {
+        margin-right: 5em;
+    }
+
+    .services img {
+        width: 150px;
+    }
+}

@@ -7,8 +7,9 @@
 
     nav {
         font-size: 10px;
-        justify-content: space-evenly;
+        justify-content: center;
         padding: 2em 0;
+        gap: 5em;
     }
 
     .account-buttons {
@@ -17,11 +18,49 @@
 
     .section-banner {
         text-align: center;
+        padding-bottom: 2em;
     }
 
     .section-banner h1 {
-        font-size: 25px;
+        font-size: 20px;
+        max-width: 20em;
+    }
+
+    .section-banner p {
+        font-size: 13px;
         max-width: 25em;
+    }
+
+    .section-banner .download-buttons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        min-width: 450px;
+        gap: 2em;
+    }
+
+    .section-banner .download-buttons button {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .section-banner .download-buttons button:last-child {
+        font-size: 12.5px;
+        max-width: 30em;
+        height: 71px;
+    }
+
+    .section-card-info {
+        min-height: 500px;
+    }
+
+    .section-card-info .card-list {
+        flex-direction: column;
+        margin: 3em 0;
+    }
+
+    .section-card-info .card-list .card {
+        border: none;
     }
 
     .section-plans {
@@ -32,7 +71,7 @@
 
     .pricing-section {
         flex-direction: column;
-        min-width: 500px;
+        min-width: 300px;
         /* width: 500px; */
     }
 
@@ -43,9 +82,22 @@
         gap: 2em;
     }
 
+    .section-benefits {
+        flex-direction: column;
+        min-height: 1000px;
+    }
+
+    .section-benefits .content {
+        flex-direction: column;
+    }
+
+    .section-benefits .content .first-row {
+        display: flex;
+    }
+
     .section-plans .contact-us {
         text-align: center;
-        min-width: 550px;
+        min-width: 300px;
         border-radius: 10px;
     }
 
