@@ -1,0 +1,11 @@
+@media (width <=600px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cards-list {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+}
