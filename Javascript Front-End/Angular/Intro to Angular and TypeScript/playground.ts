@@ -29,7 +29,7 @@ function getLength(arr: number[]) {
   return sum;
 }
 
-function searchName(names) {
+function searchName(names: [string, number], []) {
   for (let name of names) {
     if (name === "Sasho") {
       names.push("Ivancho");
@@ -38,6 +38,28 @@ function searchName(names) {
   return names.join(", ");
 }
 
-console.log(searchName(["Pesho", "Sasho", "Boris", 0, 5]));
+function welcomeTravelers(name: string | string[]) {
+  if (Array.isArray(name)) {
+    console.log(`Hello, ${name.join(" and ")}`);
+  } else {
+    console.log("Hello alone traveler");
+  }
+}
 
-console.log(getLength([3, 4, 5]));
+type Point = {
+  x: number;
+  y: number;
+};
+
+function printCoord(pt: Point) {
+  console.log(`The coordenate's x is ${pt.x}`);
+  console.log(`The coordenate's x is ${pt.y}`);
+}
+
+printCoord({ x: 5, y: 15 });
+
+// welcomeTravelers(["Petko", "Pesho"]);
+
+// console.log(searchName(["Pesho", "Sasho", "Boris"]));
+
+// console.log(getLength([3, 4, 5]));

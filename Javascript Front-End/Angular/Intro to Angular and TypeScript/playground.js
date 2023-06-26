@@ -16,7 +16,7 @@ function getLength(arr) {
     });
     return sum;
 }
-function searchName(names) {
+function searchName(names, _a) {
     for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
         var name_1 = names_1[_i];
         if (name_1 === "Sasho") {
@@ -25,5 +25,19 @@ function searchName(names) {
     }
     return names.join(", ");
 }
-console.log(searchName(["Pesho", "Sasho", "Boris", 0, 5]));
-console.log(getLength([3, 4, 5]));
+function welcomeTravelers(name) {
+    if (Array.isArray(name)) {
+        console.log("Hello, ".concat(name.join(" and ")));
+    }
+    else {
+        console.log("Hello alone traveler");
+    }
+}
+function printCoord(pt) {
+    console.log("The coordenate's x is ".concat(pt.x));
+    console.log("The coordenate's x is ".concat(pt.y));
+}
+printCoord({ x: 5, y: 15 });
+// welcomeTravelers(["Petko", "Pesho"]);
+// console.log(searchName(["Pesho", "Sasho", "Boris"]));
+// console.log(getLength([3, 4, 5]));
