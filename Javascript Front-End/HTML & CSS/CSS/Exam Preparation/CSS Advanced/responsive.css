@@ -1,0 +1,120 @@
+@media (width <=600px) {
+    body {
+        margin: 0 auto;
+    }
+
+    main {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    main .left-to-right:first-child {
+        max-height: 540px;
+        display: flex;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding-top: 4em;
+    }
+
+    main .left-to-right button {
+        display: none;
+    }
+
+    main .left-to-right h1 {
+        font-size: 28px;
+    }
+
+    main .left-to-right article header p {
+        font-size: 20px;
+    }
+
+    .left-to-right article p:last-of-type {
+        font-size: 16px;
+        max-width: 20em;
+    }
+
+    main .left-to-right article {
+        border-radius: 20%;
+        padding: 60px 40px;
+        width: 550px;
+        height: 350px;
+    }
+
+    .left-to-right:first-child {
+        padding: 50px;
+    }
+
+
+    main section:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    main section:nth-child(2) h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    main section:nth-child(2) button {
+        display: none;
+    }
+
+    main section:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    main section.left-to-right:nth-child(3) {
+        padding: 20px 50px;
+    }
+
+    main .left-to-right h1 {
+        margin: 0;
+    }
+
+    main section:nth-child(2) article, main section:nth-child(4) article {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    main section:nth-child(2) article img,
+    main section:nth-child(4) article img {
+        width: 400px;
+    }
+
+    main section:nth-child(2) article,
+    main section:nth-child(4) article {
+        width: 350px;
+    }
+
+
+
+    section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+        margin: 1em auto;
+    }
+
+    section form label {
+        display: inline-block;
+    }
+
+    section form label input {
+        width: 300px;
+        display: inline-block;
+    }
+
+    section form label input,
+    section form textarea {
+        width: 300px;
+    }
+}
