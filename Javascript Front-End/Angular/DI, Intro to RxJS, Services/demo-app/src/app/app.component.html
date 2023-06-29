@@ -1,0 +1,9 @@
+<div class="list-container">
+    <h1>{{title}}</h1>
+    <div class="input-fields">
+        <input type="text" #inputName placeholder="Enter name">
+        <input type="number" #inputAge placeholder="Enter age">
+    </div>
+    <button class="add-button" (click)="addUser(inputName, inputAge)">Add user</button>
+    <app-users-list [users]="users" />
+</div>

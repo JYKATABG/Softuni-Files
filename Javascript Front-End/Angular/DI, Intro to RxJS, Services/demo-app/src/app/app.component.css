@@ -1,0 +1,48 @@
+h1 {
+    margin-top: 1em;
+    font-size: 45px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.input-fields {
+    display: flex;
+    gap: 2em;
+}
+
+.input-fields input {
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: lightslategray;
+    border-bottom: 1px solid #fff;
+    color: #000;
+}
+
+.input-fields input::placeholder {
+    color: #fff;
+}
+
+.add-button {
+    cursor: pointer;
+    padding: 0.5em 2em;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: lightgray;
+    color: #fff;
+    transform: scale(1.1);
+}
