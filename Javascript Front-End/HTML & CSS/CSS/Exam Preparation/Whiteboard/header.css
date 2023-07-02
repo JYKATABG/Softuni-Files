@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1.5em 12em;
+    /* margin-bottom: 1em; */
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+header .logo h2 {
+    font-weight: normal;
+}
+
+header .logo i {
+    font-size: 25px;
+}
+
+header .cart-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+header .cart-logo h2 {
+    font-weight: normal;
+}
+
+header .cart-logo i {
+    font-size: 25px;
+}
