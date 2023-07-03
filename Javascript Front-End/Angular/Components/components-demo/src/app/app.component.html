@@ -1,1 +1,8 @@
-<app-todo-app />
+<div class="todo">
+    <div class="header">
+        <h1>ToDo List</h1>
+        <input type="text" #inputValue class="todo-input" placeholder="Write your todo list here...">
+        <button class="btn-add" (click)="addTodo(inputValue)">Add</button>
+    </div>
+    <app-todos-list [todos]="todos" />
+</div>
