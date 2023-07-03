@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
-import { User } from './types/User';
+import { Component, OnInit } from '@angular/core';
+import { User } from './types/JsonPlaceHolder';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Company demo';
+  users: User[] = [];
 
-  users: User[] = [
-    { name: 'Penka', age: 27 },
-    { name: 'Sasho', age: 13 },
-    { name: 'Gencho', age: 42 },
-    { name: 'Vanko', age: 68 },
-  ];
+  constructor(public userService: UserService) {
+    this.users = userService.users;
+  }
+
+  ngOnInit() {
+    this.userService.getUsers().subscribe((data) => {
+      console.log(data);
+      this.users = data;
+    });
+  }
 
   addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
     if (
@@ -35,9 +41,9 @@ export class AppComponent {
       }
     }
 
-    let user = { name: inputName.value, age: Number(inputAge.value) };
-    this.users.push(user);
-    this.clearInput(inputName, inputAge);
+    // let user = { name: inputName.value, age: Number(inputAge.value) };
+    // this.users.push(user);
+    // this.clearInput(inputName, inputAge);
   }
 
   clearInput(name: HTMLInputElement, age: HTMLInputElement) {
