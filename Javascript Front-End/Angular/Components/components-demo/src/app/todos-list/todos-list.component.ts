@@ -16,7 +16,6 @@ export class TodosListComponent {
         this.status = !this.status;
       }
     }
-    console.log(this.status);
   }
 
   onDelete(todo: Todo) {

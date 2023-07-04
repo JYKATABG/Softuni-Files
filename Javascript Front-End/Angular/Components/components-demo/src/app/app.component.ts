@@ -23,7 +23,6 @@ export class AppComponent {
     };
     this.todos.push(todo);
     input.value = '';
-    console.log(this.todos);
   }
 
   generateRandomId() {

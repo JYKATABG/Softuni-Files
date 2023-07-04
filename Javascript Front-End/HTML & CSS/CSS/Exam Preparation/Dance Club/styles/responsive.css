@@ -1,0 +1,110 @@
+@media (width <=600px) {
+    body {
+        min-width: 500px;
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    nav p {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0.5em;
+    }
+
+    nav ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    header div h1 {
+        font-size: 35px;
+        max-width: 5em;
+        margin-bottom: 0.5em;
+    }
+
+    main .trainings {
+        flex-direction: column;
+    }
+
+    .trainings div {
+        width: 80%;
+    }
+
+    .instructors p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .instructors .instructors-pic {
+        justify-content: center;
+    }
+
+    .classes ul {
+        gap: 1.5em;
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    .classes ul li {
+        flex: 1 0 35%;
+    }
+
+    .classes li div h3 {
+        font-size: 23px;
+    }
+
+    .classes li>p {
+        font-size: 45px;
+    }
+
+    .classes li div p {
+        font-size: 12px;
+    }
+
+    .getInTouch {
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1.2em 0 1em;
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .getInTouch form input,
+    .getInTouch form textarea {
+        width: 80%;
+    }
+
+    .map {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .site-footer .wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .sitemap h3,
+    .sitemap header {
+        display: inline-block;
+    }
+
+    .about>p {
+        font-size: 9.5px;
+    }
+
+    .site-footer .sitemap {
+        flex: 1 1 10%;
+    }
+}
