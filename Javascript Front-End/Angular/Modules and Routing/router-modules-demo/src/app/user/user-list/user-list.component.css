@@ -1,0 +1,21 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+}
+
+.user-button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-button:hover {
+    color: lightslategray;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
