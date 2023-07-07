@@ -1,0 +1,25 @@
+.newsletter {
+    background: linear-gradient(90deg, rgba(226, 190, 82, 1) 0%, rgba(145, 108, 27, 1) 49%, rgba(226, 190, 82, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 2em 1.5em;
+}
+
+.newsletter .info {
+    color: #fff;
+}
+
+.newsletter .subscribe-btn {
+    padding: 0.8em 1em;
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+footer p {
+    padding: 1em 0;
+    text-align: center;
+}
