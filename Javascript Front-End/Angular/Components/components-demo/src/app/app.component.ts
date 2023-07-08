@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from './interfaces/Todo';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +8,12 @@ import { Todo } from './interfaces/Todo';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Todo-app';
+  appTodos: Todo[] = [];
 
-  todos: Todo[] = [
-    { id: 1, text: 'Clean your room', complete: false },
-    { id: 2, text: 'Walk the dog', complete: false },
-    { id: 3, text: 'Throw the trash', complete: false },
-  ];
+  constructor(private todoService: TodoService) {}
 
   addTodo(input: HTMLInputElement) {
-    let todo: Todo = {
-      id: this.generateRandomId(),
-      text: input.value,
-      complete: false,
-    };
-    this.todos.push(todo);
+    this.todoService.addTodo(input.value);
     input.value = '';
-  }
-
-  generateRandomId() {
-    return Number(Math.floor(Math.random() * 100));
   }
 }

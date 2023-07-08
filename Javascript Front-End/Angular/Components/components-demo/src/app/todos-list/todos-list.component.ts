@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Todo } from '../interfaces/Todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todos-list',
@@ -7,18 +8,22 @@ import { Todo } from '../interfaces/Todo';
   styleUrls: ['./todos-list.component.css'],
 })
 export class TodosListComponent {
-  @Input() todos: Todo[] = [];
-  status: boolean = false;
+  list: Todo[] = [];
 
-  onComplete(todo: Todo) {
-    for (let arrTodo of this.todos) {
-      if (todo.id === arrTodo.id) {
-        this.status = !this.status;
-      }
-    }
+  constructor(private todoService: TodoService) {
+    const todos = todoService.getTodos();
+    this.list = todos;
   }
 
-  onDelete(todo: Todo) {
-    this.todos = this.todos.filter((x) => x.id !== todo.id);
+  marked: boolean = false;
+  completedTodo: boolean = false;
+
+  onComplete(todo: Todo) {
+    this.todoService.completeTodo(todo.id);
+    this.marked = !this.marked;
+  }
+
+  onDelete(id: number) {
+    this.todoService.deleteTodo(id);
   }
 }

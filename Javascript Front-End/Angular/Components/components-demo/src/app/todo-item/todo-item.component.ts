@@ -6,4 +6,6 @@ import { Todo } from '../interfaces/Todo';
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css'],
 })
-export class TodoItemComponent {}
+export class TodoItemComponent {
+  
+}
