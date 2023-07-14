@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "post-request-demo",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

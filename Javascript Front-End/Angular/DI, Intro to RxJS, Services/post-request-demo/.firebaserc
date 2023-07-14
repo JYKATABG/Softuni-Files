@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "armageon-s-server": {
+      "hosting": {
+        "post-request-demo": [
+          "armageon-s-server"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "armageon-s-server"
+  }
+}

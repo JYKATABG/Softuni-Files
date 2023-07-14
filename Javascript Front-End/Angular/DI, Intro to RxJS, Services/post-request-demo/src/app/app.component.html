@@ -1,0 +1,11 @@
+<div class="container">
+  <form>
+    <div>
+      <label for="author">Author</label>
+      <input type="text" #inputAuthor placeholder="Enter an author">
+    </div>
+    <label for="title">Title</label>
+    <input type="text" #inputTitle placeholder="Enter an author">
+    <button type="submit" (click)="createBook(inputAuthor.value, inputTitle.value)">Create</button>
+  </form>
+</div>
